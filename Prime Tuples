@@ -1,6 +1,12 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+//
+// the code has a time limit exceed problem//
+//
+
+
+
 bool isprime(int n) 
 { 
     // Corner case 
