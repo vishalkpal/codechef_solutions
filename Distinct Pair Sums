@@ -1,0 +1,21 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+  // your code goes here
+  int t;cin>>t;
+  while(t--)
+  {
+      long l,r;
+      cin>>l>>r;
+      long k=r-l,c=0;
+      if(k==0)
+      cout<<"1"<<endl;
+      else{
+      {
+         c=2*(k+1)-1;
+      } 
+      cout<<c<<endl;
+      }
+  return 0;
+}
