@@ -1,0 +1,39 @@
+#include<bits/stdc++.h>
+//#include<conio>
+using namespace std;
+
+int main()
+{
+ int t; cin>>t;
+ while(t--)
+ {
+   long n;
+   cin>>n;
+   long long a[n];
+   for(long i=0;i<n;i++)
+   {
+    cin>>a[i];
+   }
+   sort(a,a+n);
+   
+   long x,y,z;
+   x=a[0]; z=a[n-1];
+   bool f=0;
+   
+   for(long i=1;i<n;i++)
+   {
+      if(a[i]!=x)
+      {
+        y=a[i];
+        f=1;
+      }
+   }
+   
+    if(f==0)
+     y=a[1];
+    // cout<<x<<y<<z;
+   long long sum=abs(x-y)+abs(y-z)+abs(z-x); 
+   cout<<sum<<endl;
+ }
+  return 0;
+}
