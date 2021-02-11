@@ -1,0 +1,41 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int T;
+    cin>> T;
+   
+    while(T--){
+        int n;//no of frogs
+        cin>>n;
+        unordered_map<int,int> mJmp; // <wei8,jmp>
+        unordered_map<int,int> mPos;
+     //INPUT
+            int a,wei8[n];
+            for(int j=0;j<n;j++){
+                cin>>wei8[j];
+            }
+            for(int j=0;j<n;j++ )
+            {   cin>>a;
+                mJmp[wei8[j]]=a;
+                mPos[wei8[j]]=j;
+            }
+        //PROCESSING 
+        int step=0;
+        
+          for(int w=1;w<n;){
+              if(mPos[w]>=mPos[w+1]){
+                  mPos[w+1]+=mJmp[w+1];
+                  step++;
+                  
+                  
+              }
+              else
+                  w++;
+          }  
+        //O/P
+         cout<<step<<endl;
+        }
+    
+return 0;
+}
