@@ -1,7 +1,7 @@
 
 
 
-        ///                    TLE
+        ///                    TLE in one cases
 
 
 
@@ -11,15 +11,9 @@ using namespace std;
 
 int calc(long n)
 {
-  long k;
-  for(int i=1;i<n;i++)
-  {
-    if(pow(2,i)>n)
-    { 
-      k=pow(2,i); break;
-    }
-    
-  }
+  long k=2;
+  for( k=2;k<=n;k=k*2);
+  
   return k;
 }
 
@@ -31,21 +25,24 @@ int main()
   long n;
   cin>>n;
   long d=calc(n);
+ // cout<<d<<endl;
   long max=0;
-  for(int i=1;i<d;i++)
+  long a=(d/2)-1;
+  if(n==1)
+    cout<<"1"<<endl;
+  else
+  {  
+  for(int i=d-1;i>0;i--)
   {
-    for(int j=1;j<d;j++)
-    {
-      if((i^j)==n)
-      {
-        if((i*j)>max)
-          max=i*j;
-       // cout<<i<<" "<<j<<endl;}
-      }
-    }
-  }
+     if((a^i)==n)
+     {
+     // cout<<a<<" "<<i<<endl;
+       max=a*i;
+       break;
+     }
+  }  
   cout<<max<<endl;
  }
+}
   return 0;
 }
-
