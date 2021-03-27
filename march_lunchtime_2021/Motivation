@@ -1,0 +1,27 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int T;
+    cin>> T;
+   
+    while(T--){
+        int n,x;
+        cin>>n>>x;
+        map<int,int> mp;
+        int key,val,max=0;
+        
+        for(int i=0;i<n;i++)
+        {
+          cin>>key>>val;
+          mp[key]=val;
+          if(val>max && key<=x)
+            max=val;
+        }
+        cout<< max<<endl;
+        
+       
+    }    
+    
+return 0;
+}
