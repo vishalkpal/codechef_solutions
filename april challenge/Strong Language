@@ -1,0 +1,30 @@
+ #include<bits/stdc++.h>
+ using namespace std;
+
+int main()
+{
+  int t;
+  cin>>t;
+  while(t--)
+  {
+   string s;
+   long k=0,c=0,n;
+   bool f=0;
+   cin>>n>>k;
+   cin>>s;
+   for(long i=0;i<n;i++)
+   {
+    if(s[i]=='*')
+      c++;
+    if(c==k)
+      f=1;
+    if(s[i]!='*')
+      c=0;
+   }
+   if(f==1)
+    cout<<"YES"<<endl;
+  else
+    cout<<"NO"<<endl;
+  }
+  return 0;
+}
