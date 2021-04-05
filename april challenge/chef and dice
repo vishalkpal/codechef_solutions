@@ -1,0 +1,23 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long 
+
+int main() {
+    ll T;
+    cin>>T;
+    while(T--){
+        ll N;
+        cin>>N;
+        
+        vector<ll> di={0,20,36,51,60,76,88,99,104};
+        // layer wise  sides summ =44 top sum 24
+        ll q=N/4; // nos of layer
+        ll r=0;
+        if(q!=0){q--,r=4;}
+        
+         r+=N%4; // nos of dice on the top layer
+        ll res=(q*44+di[r]);
+        cout<<res<<endl;
+    }
+	return 0;
+}
