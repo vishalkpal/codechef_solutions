@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+#define ll long long
+#define mod 1000000007
+using namespace std;
+
+int main() {
+    ll T;
+    cin>>T;
+    while(T--){
+        int b;
+        cin>> b;
+        b--;
+    ll x=1, y=2; 
+    while (b > 0) {
+        if (b%2 == 1) {
+            x = (x*y) % mod; 
+        }
+        y = (y*y) % mod; 
+        b /= 2;
+    }
+
+        cout<<x % mod<<endl;
+    }
+	return 0;
+}
